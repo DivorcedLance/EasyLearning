@@ -2,8 +2,8 @@ import { Login } from '../components/Login'
 
 export function LoginPage() {
   return (
-    <div className="h-screen">
-      <div className="flex flex-col justify-center p-4  bg-white">
+    <div className="">
+      <div className="h-dvh flex flex-col justify-center p-4  bg-white">
         <div className="flex flex-row-reverse justify-center w-full">
           <Login />
           <div className="">
