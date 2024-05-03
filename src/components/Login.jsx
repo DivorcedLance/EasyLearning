@@ -20,8 +20,8 @@ export function Login() {
     };
 
     return (
-        <div className='flex'>
-            <h2>Login</h2>
+        <div className='flex-col p-4 text-center space-y-8'>
+            <h1>Login</h1>
             <form onSubmit={handleSubmit}>
                 <label>
                     Username:
