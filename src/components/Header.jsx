@@ -1,5 +1,4 @@
 import { SchoolHeader } from "./SchoolHeader";
-import { SchoolHeader } from "./SchoolHeader";
 
 export function Header() {
   return (
