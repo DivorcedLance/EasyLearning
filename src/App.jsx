@@ -1,5 +1,6 @@
 import './App.css'
-import { HomePage } from './pages/HomePage'
+import { StudentPage } from './pages/StudentPage'
+import { TeacherPage } from './pages/TeacherPage'
 import { LoginPage } from './pages/LoginPage'
 import { BrowserRouter, Route, Routes} from 'react-router-dom'
 function App() {
@@ -9,7 +10,8 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<LoginPage/>} />
-        <Route path='/home' element={<HomePage/>} />
+        <Route path='/student' element={<StudentPage/>} />
+        <Route path='/teacher' element={<TeacherPage/>} />
       </Routes>
     </BrowserRouter>
     </>
