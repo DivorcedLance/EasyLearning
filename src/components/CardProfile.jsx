@@ -2,7 +2,7 @@
 export function CardProfile() {
   return (
     <>
-        <div className="flex justify-between items-center h-3/6 w-2/5 bg-zinc-300 p-56">
+        <div className="flex justify-between items-center h-3/6 w-fit bg-zinc-300 p-56">
             <div className="flex flex-col justify-center items-center">
                 <div className="w-72 mb-5">
                     <img src="/img/profile.png" alt="" className="object-cover"/>

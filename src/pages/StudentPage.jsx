@@ -5,11 +5,15 @@ import { CardProfile } from '../components/CardProfile'
 export function StudentPage() {
   return (
     <>
-      <Header />
-      <StudentSideBar />
-      <main>
-        
-      </main>
+        <Header />
+      <div className='flex flex-row'>
+        <StudentSideBar />
+        <main className='bg-cyan-100 w-full'>
+            <CardProfile />
+            
+          </main>
+
+      </div>
     </>
   )
 }
