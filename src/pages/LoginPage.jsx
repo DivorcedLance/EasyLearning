@@ -4,7 +4,9 @@ export function LoginPage() {
     return (
         <div className='flex'>
             <Login />
-            <img src="/img/TESIS_1.png" alt="Login Image" style={{ objectFit: 'cover' }}/>
+            <div className=''>
+                <img className='object-fit' src="/img/TESIS_1.png" alt="Login Image"/>
+            </div>
         </div>
     );
 }
