@@ -1,9 +1,10 @@
 import { Header } from "../components/Header";
 
-export function HomePage() {
+export function StudentPage() {
   return (
     <>
         <Header/>
+        <div>Estudiante</div>
     </>
   )
 }

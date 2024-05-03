@@ -6,6 +6,8 @@ export function Login() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [loggedIn, setLoggedIn] = useState(false);
+    const [isStudent, setIsStudent] = useState(false);
+    const [isTeacher, setIsTeacher] = useState(false);
 
     const handleUsernameChange = (e) => {
         setUsername(e.target.value);
@@ -22,14 +24,25 @@ export function Login() {
         console.log('Password:', password);
         // Se validan credenciales
         // Se redirige a la página de inicio
-        if (username === 'usuario' && password === 'contraseña') {
+        if (username === 'estudiante' && password === 'contraseña') {
             // Si las credenciales son válidas, establece el estado loggedIn a true
             setLoggedIn(true);
+            setIsStudent(true);
+        }
+        if (username === 'docente' && password === 'contraseña') {
+            // Si las credenciales son válidas, establece el estado loggedIn a true
+            setLoggedIn(true);
+            setIsTeacher(true);
         }
     };
 
     if (loggedIn) {
-        return <Navigate to="/home" />;
+        if (isStudent) {
+            return <Navigate to="/student" />;
+        }
+        if (isTeacher) {
+            return <Navigate to="/teacher" />;
+        }
     }
 
     return (
@@ -39,9 +52,7 @@ export function Login() {
             <form onSubmit={handleSubmit}>
                 <label>Institución educativa</label>
                 <select>
-                    <option value="option1">Option 1</option>
-                    <option value="option2">Option 2</option>
-                    <option value="option3">Option 3</option>
+                    <option value="option1">Colegio Mercedario San Pedro Pascual</option>
                 </select>
                 <button>Buscar</button>
                 <label className='flex flex-col'>
