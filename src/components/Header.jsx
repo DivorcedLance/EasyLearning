@@ -1,3 +1,4 @@
+import { SchoolHeader } from "./SchoolHeader";
 
 export function Header() {
   return (
@@ -12,8 +13,8 @@ export function Header() {
         </div>
         <header className='flex flex-row-reverse justify-between items-center p-0 bg-green-400'>
             <h1>EDUCA</h1>
-            <img className='object-cover' src="/img/escudoCole.png" alt="Logo de la Secretaría de Educación de Bogotá" />
         </header>
+        <SchoolHeader/>
     </>
   )
 }
