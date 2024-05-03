@@ -52,7 +52,7 @@ export function Login() {
             <form onSubmit={handleSubmit}>
                 <label>Institución educativa</label>
                 <select>
-                    <option value="option1">Colegio Mercedario San Pedro Pascual</option>
+                    <option value="option1">I.E.P. MARIA MONTESSORI - UGEL 06</option>
                 </select>
                 <button>Buscar</button>
                 <label className='flex flex-col'>
