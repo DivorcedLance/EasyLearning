@@ -7,13 +7,13 @@ function App() {
 
   return (
     <>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<LoginPage/>} />
-        <Route path='/student' element={<StudentPage/>} />
-        <Route path='/teacher' element={<TeacherPage/>} />
-      </Routes>
-    </BrowserRouter>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<LoginPage/>} />
+          <Route path='/student' element={<StudentPage/>} />
+          <Route path='/teacher' element={<TeacherPage/>} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
