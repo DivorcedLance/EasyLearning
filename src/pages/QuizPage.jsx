@@ -4,7 +4,7 @@ import Quiz from '../components/Quiz'
 export function QuizPage() {
   return (
     <div className="app-container">
-      <h1>Quiz de Relatividad</h1>
+      <h1 className='text-5xl pb-4'>Quiz de Relatividad</h1>
       <Quiz />
     </div>
   )

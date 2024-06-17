@@ -1,73 +1,65 @@
-import { useState } from 'react';
-import Question from './Question';
+import { useState } from 'react'
+import Question from './Question'
 
 const questions = [
   {
-    question: `
-## ¿Cuál de los siguientes enunciados describe correctamente un postulado de la relatividad especial?
-$$e=mc^2$$
-`,
-    options: [
-      'A. Albert Einstein',
-      'B. Isaac Newton',
-      'C. Niels Bohr',
-      'D. Galileo Galilei',
-    ],
-    correctAnswer: 'A. Albert Einstein',
+    question: `# ¿Cuál es el resultado de la siguiente operación? $$5 + 3 =$$`,
+    options: ['A. 6', 'B. 7', 'C. 8', 'D. 9'],
+    correctAnswer: 'C. 8',
   },
+
   {
-    question: '¿Cuál de los siguientes enunciados describe correctamente un postulado de la relatividad especial?',
-    options: [
-      'A. La velocidad de la luz depende del movimiento del observador.',
-      'B. Las leyes de la física son las mismas para todos los observadores no acelerados.',
-      'C. La masa de un objeto aumenta con su velocidad.',
-      'D. El tiempo es absoluto y el mismo para todos los observadores.',
-    ],
-    correctAnswer: 'B. Las leyes de la física son las mismas para todos los observadores no acelerados.',
+    question: `# ¿Cuál de los siguientes números es par?`,
+    options: ['A. 3', 'B. 7', 'C. 10', 'D. 11'],
+    correctAnswer: 'C. 10',
   },
+
   {
-    question: '¿Qué describe la relatividad general?',
-    options: [
-      'A. La interacción entre partículas subatómicas.',
-      'B. La fuerza electromagnética.',
-      'C. La gravedad como una curvatura del espacio-tiempo.',
-      'D. La teoría de los quarks.',
-    ],
-    correctAnswer: 'C. La gravedad como una curvatura del espacio-tiempo.',
+    question: `# ¿Cuánto es $$4 \\times 6$$?`,
+    options: ['A. 20', 'B. 24', 'C. 26', 'D. 28'],
+    correctAnswer: 'B. 24',
   },
+
   {
-    question: '¿Cuál es el nombre del científico que desarrolló la teoría de la relatividad?',
-    options: [
-      'A. Albert Einstein',
-      'B. Isaac Newton',
-      'C. Niels Bohr',
-      'D. Galileo Galilei',
-    ],
-    correctAnswer: 'A. Albert Einstein',
+    question: `# ¿Cuál es el valor de $$\\frac{15}{3}$$?`,
+    options: ['A. 3', 'B. 4', 'C. 5', 'D. 6'],
+    correctAnswer: 'C. 5',
   },
-];
+
+  {
+    question: `# Observa la siguiente tabla y responde: ¿Cuál es el número que falta en la segunda columna?
+| Número | Siguiente número |
+|--------|------------------|
+| 4      | 5                |
+| 6      |                  |
+| 8      | 9                |
+| 10     | 11               |`,
+    options: ['A. 5', 'B. 6', 'C. 7', 'D. 8'],
+    correctAnswer: 'C. 7',
+  },
+]
 
 const Quiz = () => {
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
   const [score, setScore] = useState(0)
-  const puntos = 100/questions.length;
+  const puntos = 100 / questions.length
 
   const handleAnswer = (isCorrect) => {
-    setScore((prevScore) => prevScore + (isCorrect ? puntos : 0));
+    setScore((prevScore) => prevScore + (isCorrect ? puntos : 0))
     if (currentQuestionIndex < questions.length - 1) {
-      setCurrentQuestionIndex(currentQuestionIndex + 1);
+      setCurrentQuestionIndex(currentQuestionIndex + 1)
     } else {
       // Quiz finished
-      const finalScore = isCorrect ? score + puntos : score;
-      alert(`Quiz terminado! Su puntaje es: ${finalScore} %`);
-      setCurrentQuestionIndex(0);
-      setScore(0);
+      const finalScore = isCorrect ? score + puntos : score
+      alert(`Quiz terminado! Su puntaje es: ${finalScore} %`)
+      setCurrentQuestionIndex(0)
+      setScore(0)
     }
-  };
+  }
 
   return (
     <div className="quiz-container">
-      <h2>Pregunta {currentQuestionIndex + 1}</h2>
+      <h1 className="text-3xl">Pregunta {currentQuestionIndex + 1}</h1>
       <Question
         question={questions[currentQuestionIndex].question}
         options={questions[currentQuestionIndex].options}
@@ -75,7 +67,7 @@ const Quiz = () => {
         onAnswer={handleAnswer}
       />
     </div>
-  );
-};
+  )
+}
 
-export default Quiz;
+export default Quiz

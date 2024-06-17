@@ -1,46 +1,50 @@
-import { useEffect, useState } from 'react';
-import { MarkDownDisplay } from './MarkDownDisplay';
+import { useEffect, useState } from 'react'
+import { MarkDownDisplay } from './MarkDownDisplay'
 
 const Question = ({ question, options, correctAnswer, onAnswer }) => {
-  const [selectedOption, setSelectedOption] = useState(null);
-  const [option, setOption] = useState(null);
-  const [isWaiting, setIsWaiting] = useState(false);
+  const [option, setOption] = useState(null)
+  const [isWaiting, setIsWaiting] = useState(false)
 
   const handleOptionClick = (o) => {
-    setOption(o);
-    setSelectedOption(option);
-    setIsWaiting(true);
-  };
-  
+    setOption(o)
+    setIsWaiting(true)
+  }
+
   useEffect(() => {
-    let timer;
+    let timer
     if (isWaiting) {
       timer = setTimeout(() => {
-        setSelectedOption(null);
-        setIsWaiting(false); // Termina el estado de espera
-        onAnswer(option === correctAnswer);
-      }, 1000);
+        setOption(null)
+        setIsWaiting(false) // Termina el estado de espera
+        onAnswer(option === correctAnswer)
+      }, 1000)
     }
 
     // Limpiar el temporizador si el componente se desmonta
-    return () => clearTimeout(timer);
-  }, [isWaiting]);
+    return () => clearTimeout(timer)
+  }, [isWaiting, option, correctAnswer, onAnswer])
 
   return (
     <div className="w-full">
       <MarkDownDisplay markdown={question} />
       {options.map((option, index) => (
         <button
+          disabled={isWaiting}
           key={index}
-          className={`option-button ${selectedOption === option ? 'bg-slate-500' : ''}  `}
+          className={`option-button ${
+            isWaiting
+              ? option === correctAnswer
+                ? 'bg-lime-600'
+                : 'bg-gray-200'
+              : 'bg-white'
+          }`}
           onClick={() => handleOptionClick(option)}
-          
         >
           <MarkDownDisplay markdown={option} />
         </button>
       ))}
     </div>
-  );
-};
+  )
+}
 
-export default Question;
+export default Question
