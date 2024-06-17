@@ -2,11 +2,11 @@ import { useEffect, useState } from 'react'
 import { MarkDownDisplay } from './MarkDownDisplay'
 
 const Question = ({ question, options, correctAnswer, onAnswer }) => {
-  const [option, setOption] = useState(null)
+  const [selectedOption, setSelectedOption] = useState(null)
   const [isWaiting, setIsWaiting] = useState(false)
 
-  const handleOptionClick = (o) => {
-    setOption(o)
+  const handleOptionClick = (option) => {
+    setSelectedOption(option)
     setIsWaiting(true)
   }
 
@@ -14,15 +14,15 @@ const Question = ({ question, options, correctAnswer, onAnswer }) => {
     let timer
     if (isWaiting) {
       timer = setTimeout(() => {
-        setOption(null)
+        setSelectedOption(null)
         setIsWaiting(false) // Termina el estado de espera
-        onAnswer(option === correctAnswer)
+        onAnswer(selectedOption === correctAnswer)
       }, 1000)
     }
 
     // Limpiar el temporizador si el componente se desmonta
     return () => clearTimeout(timer)
-  }, [isWaiting, option, correctAnswer, onAnswer])
+  }, [isWaiting, selectedOption, correctAnswer, onAnswer])
 
   return (
     <div className="w-full">
@@ -35,8 +35,10 @@ const Question = ({ question, options, correctAnswer, onAnswer }) => {
             isWaiting
               ? option === correctAnswer
                 ? 'bg-lime-600'
+                : option === selectedOption
+                ? 'bg-red-600'
                 : 'bg-gray-200'
-              : 'bg-white'
+              : 'bg-gray-200'
           }`}
           onClick={() => handleOptionClick(option)}
         >
