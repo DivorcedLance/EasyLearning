@@ -4,7 +4,7 @@ import { TeacherPage } from './pages/TeacherPage'
 import { LoginPage } from './pages/LoginPage'
 import { WordPage } from './pages/WordPage'
 import { BrowserRouter, Route, Routes} from 'react-router-dom'
-import MarkdownPage from './pages/MarkdownPage'
+import { MarkdownPage } from './pages/MarkdownPage'
 import { QuizPage } from './pages/QuizPage'
 function App() {
 
