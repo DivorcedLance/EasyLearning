@@ -36,17 +36,17 @@ const questions = [
 
 const Quiz = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [score, setScore] = useState(0);
+  const [score, setScore] = useState(0)
+  const puntos = 100/questions.length;
 
   const handleAnswer = (isCorrect) => {
-    if (isCorrect) {
-      setScore(score + 1);
-    }
+    setScore((prevScore) => prevScore + (isCorrect ? puntos : 0));
     if (currentQuestionIndex < questions.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
     } else {
       // Quiz finished
-      alert(`Quiz terminado! Su puntaje es: ${score + 1}/${questions.length}`);
+      const finalScore = isCorrect ? score + puntos : score;
+      alert(`Quiz terminado! Su puntaje es: ${finalScore} %`);
       setCurrentQuestionIndex(0);
       setScore(0);
     }
@@ -54,6 +54,7 @@ const Quiz = () => {
 
   return (
     <div className="quiz-container">
+      <h2>Pregunta {currentQuestionIndex + 1}</h2>
       <Question
         question={questions[currentQuestionIndex].question}
         options={questions[currentQuestionIndex].options}

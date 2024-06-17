@@ -9,14 +9,14 @@ const Question = ({ question, options, correctAnswer, onAnswer }) => {
   };
 
   return (
-    <div className="question-container">
+    <div className="w-full">
       <h3>{question}</h3>
       {options.map((option, index) => (
         <button
           key={index}
-          className={`option-button ${selectedOption === option ? 'selected' : ''}`}
+          className={`option-button ${selectedOption === option ? 'bg-red-500' : ''}`}
           onClick={() => handleOptionClick(option)}
-          disabled={selectedOption !== null}
+          
         >
           {option}
         </button>
