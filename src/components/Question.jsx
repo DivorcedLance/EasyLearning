@@ -1,9 +1,16 @@
 import { useEffect, useState } from 'react'
 import { MarkDownDisplay } from './MarkDownDisplay'
+import correcto from '../assets/sonido_pregunta.mp3';
+import incorrecto from '../assets/wrong.mp3';
 
 const Question = ({ question, options, correctAnswer, onAnswer }) => {
   const [selectedOption, setSelectedOption] = useState(null)
   const [isWaiting, setIsWaiting] = useState(false)
+
+  const playSound = (isCorrect) => {
+    const audio = new Audio(isCorrect ? correcto : incorrecto);
+    audio.play();
+  };
 
   const handleOptionClick = (option) => {
     setSelectedOption(option)
@@ -13,6 +20,8 @@ const Question = ({ question, options, correctAnswer, onAnswer }) => {
   useEffect(() => {
     let timer
     if (isWaiting) {
+      const isCorrect = selectedOption === correctAnswer;
+      playSound(isCorrect);
       timer = setTimeout(() => {
         setSelectedOption(null)
         setIsWaiting(false) // Termina el estado de espera

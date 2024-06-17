@@ -20,7 +20,7 @@ const Quiz = ({questions}) => {
   }
 
   return (
-    <div className="quiz-container">
+    <div className="w-4/6">
       <h1 className="text-3xl">Pregunta {currentQuestionIndex + 1}</h1>
       <Question
         question={questions[currentQuestionIndex].question}
