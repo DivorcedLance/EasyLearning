@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { MarkDownDisplay } from './MarkDownDisplay';
 
 const Question = ({ question, options, correctAnswer, onAnswer }) => {
   const [selectedOption, setSelectedOption] = useState(null);
@@ -10,7 +11,7 @@ const Question = ({ question, options, correctAnswer, onAnswer }) => {
 
   return (
     <div className="w-full">
-      <h3>{question}</h3>
+      <MarkDownDisplay markdown={question} />
       {options.map((option, index) => (
         <button
           key={index}
@@ -18,7 +19,7 @@ const Question = ({ question, options, correctAnswer, onAnswer }) => {
           onClick={() => handleOptionClick(option)}
           
         >
-          {option}
+          <MarkDownDisplay markdown={option} />
         </button>
       ))}
     </div>

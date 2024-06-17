@@ -5,9 +5,9 @@ import remarkMath from 'remark-math'
 import 'katex/dist/katex.min.css'
 import './markdownStyles.css'
   
-export default function MarkDownDisplay({ markdown }) {
+export function MarkDownDisplay({ markdown }) {
   return (
-    <div className="bg-slate-200 markdown-body">
+    <div className="markdown-body">
       <Markdown remarkPlugins={[remarkGfm, remarkMath]} rehypePlugins={[rehypeKatex]} className="p-4">
         {markdown}
       </Markdown>

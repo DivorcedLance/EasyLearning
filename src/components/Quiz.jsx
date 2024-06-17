@@ -3,6 +3,19 @@ import Question from './Question';
 
 const questions = [
   {
+    question: `
+## ¿Cuál de los siguientes enunciados describe correctamente un postulado de la relatividad especial?
+$$e=mc^2$$
+`,
+    options: [
+      'A. Albert Einstein',
+      'B. Isaac Newton',
+      'C. Niels Bohr',
+      'D. Galileo Galilei',
+    ],
+    correctAnswer: 'A. Albert Einstein',
+  },
+  {
     question: '¿Cuál de los siguientes enunciados describe correctamente un postulado de la relatividad especial?',
     options: [
       'A. La velocidad de la luz depende del movimiento del observador.',

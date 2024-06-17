@@ -1,4 +1,4 @@
-import MarkDownDisplay from '../components/MarkDownDisplay'
+import { MarkDownDisplay } from '../components/MarkDownDisplay'
 
 export function MarkdownPage() {
   const markdown1 = `
