@@ -77,18 +77,23 @@ export function QuizPage() {
       correctAnswer: 'A. Coma',
     },
   ]
-
   const [questions, setQuestions] = useState([])
 
   return (
-    <div className="app-container">
-      <h1 className="text-5xl pb-4">Quiz</h1>
+    <div className="w-full flex flex-col justify-center items-center translate-y-20">
+      <h1 className="text-5xl font-bold pb-4">Quiz</h1>
       {/* Grupo de botones para seleccionar el quiz */}
       <div className="flex justify-center space-x-4 pb-4">
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={() => setQuestions(mathQuestions)}>
+        <button
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          onClick={() => setQuestions(mathQuestions)}
+        >
           Matemáticas
         </button>
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={() => setQuestions(comunicationQuestions)}>
+        <button
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          onClick={() => setQuestions(comunicationQuestions)}
+        >
           Comunicación
         </button>
       </div>
