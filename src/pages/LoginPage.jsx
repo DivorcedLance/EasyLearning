@@ -12,7 +12,7 @@ export function LoginPage() {
           <div className="">
             <img
               className="object-fit"
-              src="/img/TESIS_1.png"
+              src="./img/TESIS_1.png"
               alt="Login Image"
             />
           </div>

@@ -14,7 +14,7 @@ export function CardProfile({role}) {
                         <div className="flex flex-row gap-16 justify-center items-center">
                             <div className="flex flex-col justify-center items-center">
                                 <div className="w-full mb-5">
-                                    <img src="/img/profile.png" alt="" className="object-cover"/>
+                                    <img src="./img/profile.png" alt="" className="object-cover"/>
                                 </div>
                                 
                             </div>
@@ -64,7 +64,7 @@ export function CardProfile({role}) {
                         <div className="flex flex-row gap-16 justify-center items-center">
                             <div className="flex flex-col justify-center items-center">
                                 <div className="w-full mb-5">
-                                    <img src="/img/profile.png" alt="" className="object-cover"/>
+                                    <img src="./img/profile.png" alt="" className="object-cover"/>
                                 </div>
                                 
                             </div>
