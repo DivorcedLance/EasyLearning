@@ -1,6 +1,9 @@
 import { Login } from '../components/Login'
 
 export function LoginPage() {
+
+  console.log('LoginPage')
+
   return (
     <div className="">
       <div className="h-dvh flex flex-col justify-center p-4  bg-white">
@@ -9,7 +12,7 @@ export function LoginPage() {
           <div className="">
             <img
               className="object-fit"
-              src="/img/TESIS_1.png"
+              src="./img/TESIS_1.png"
               alt="Login Image"
             />
           </div>

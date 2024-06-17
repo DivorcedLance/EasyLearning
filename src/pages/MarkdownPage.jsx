@@ -1,6 +1,6 @@
 import MarkDownDisplay from '../components/MarkDownDisplay'
 
-export default function MarkdownPage() {
+export function MarkdownPage() {
   const markdown1 = `
 # Teoría de la Relatividad
 

@@ -4,13 +4,14 @@ import { TeacherPage } from './pages/TeacherPage'
 import { LoginPage } from './pages/LoginPage'
 import { WordPage } from './pages/WordPage'
 import { BrowserRouter, Route, Routes} from 'react-router-dom'
-import MarkdownPage from './pages/MarkdownPage'
+import { MarkdownPage } from './pages/MarkdownPage'
 import { QuizPage } from './pages/QuizPage'
 function App() {
+  console.log('App')
 
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename='/EasyLearning'>
         <Routes>
           <Route path="/" element={<LoginPage/>} />
           <Route path="/word" element={<WordPage/>} />
