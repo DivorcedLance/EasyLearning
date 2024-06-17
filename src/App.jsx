@@ -11,7 +11,7 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename='/EasyLearning'>
         <Routes>
           <Route path="/" element={<LoginPage/>} />
           <Route path="/word" element={<WordPage/>} />
