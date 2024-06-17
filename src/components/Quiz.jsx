@@ -3,20 +3,7 @@ import Question from './Question';
 
 const questions = [
   {
-    question: `
-## ¿Cuál de los siguientes enunciados describe correctamente un postulado de la relatividad especial?
-$$e=mc^2$$
-`,
-    options: [
-      'A. Albert Einstein',
-      'B. Isaac Newton',
-      'C. Niels Bohr',
-      'D. Galileo Galilei',
-    ],
-    correctAnswer: 'A. Albert Einstein',
-  },
-  {
-    question: '¿Cuál de los siguientes enunciados describe correctamente un postulado de la relatividad especial?',
+    question: '# ¿Cuál de los siguientes enunciados describe correctamente un postulado de la relatividad especial?',
     options: [
       'A. La velocidad de la luz depende del movimiento del observador.',
       'B. Las leyes de la física son las mismas para todos los observadores no acelerados.',
@@ -26,7 +13,7 @@ $$e=mc^2$$
     correctAnswer: 'B. Las leyes de la física son las mismas para todos los observadores no acelerados.',
   },
   {
-    question: '¿Qué describe la relatividad general?',
+    question: '# ¿Qué describe la relatividad general?',
     options: [
       'A. La interacción entre partículas subatómicas.',
       'B. La fuerza electromagnética.',
@@ -36,7 +23,7 @@ $$e=mc^2$$
     correctAnswer: 'C. La gravedad como una curvatura del espacio-tiempo.',
   },
   {
-    question: '¿Cuál es el nombre del científico que desarrolló la teoría de la relatividad?',
+    question: '# ¿Cuál es el nombre del científico que desarrolló la teoría de la relatividad?',
     options: [
       'A. Albert Einstein',
       'B. Isaac Newton',
@@ -66,8 +53,8 @@ const Quiz = () => {
   };
 
   return (
-    <div className="quiz-container">
-      <h2>Pregunta {currentQuestionIndex + 1}</h2>
+    <div className="w-4/6">
+      <h2 className='text-3xl'>Pregunta {currentQuestionIndex + 1}</h2>
       <Question
         question={questions[currentQuestionIndex].question}
         options={questions[currentQuestionIndex].options}
