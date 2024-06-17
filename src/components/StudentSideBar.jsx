@@ -6,6 +6,7 @@ import homework_icon from '../assets/homework_icon.svg'
 import reinforcement_icon from '../assets/reinforcement_icon.svg'
 
 import { AsideButton } from '../components/AsideButton'
+import { Link } from 'react-router-dom'
 
 export function StudentSideBar() {
   return (
@@ -15,11 +16,14 @@ export function StudentSideBar() {
           <AsideButton icon={test_icon} label="Test" />
           <AsideButton icon={semanal_test_icon} label="Prueba Semanal" />
           <AsideButton icon={homework_icon} label="Tarea en casa" />
-          <AsideButton
+          {/* <AsideButton
             icon={reinforcement_icon}
             label="Evaluación de reforzamiento"
-          />
-        <div className="bg-[#969191] text-white font-bold text-center flex items-center justify-center gap-4 w-96 h-48">
+          /> */}
+          <Link to="/word"><button className="bg-blue-500 text-white h-9 flex items-center pl-2 gap-3 w-full">Word</button></Link>
+          <Link to="/md"><button className="bg-purple-500 text-white h-9 flex items-center pl-2 gap-3 w-full">Markdown</button></Link>
+          <Link to="/quiz"><button className="bg-green-500 text-white h-9 flex items-center pl-2 gap-3 w-full">Quiz</button></Link>
+        <div className="bg-[#969191] text-white font-bold text-center flex items-center justify-center gap-4 w-96 h-40">
           <img src={default_avatar} alt="" className="w-20" />
           <div className="flex flex-col">
             <h2>PATRICK GUZMAN</h2>
