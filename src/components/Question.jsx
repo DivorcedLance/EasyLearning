@@ -1,12 +1,29 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const Question = ({ question, options, correctAnswer, onAnswer }) => {
   const [selectedOption, setSelectedOption] = useState(null);
+  const [option, setOption] = useState(null);
+  const [isWaiting, setIsWaiting] = useState(false);
 
-  const handleOptionClick = (option) => {
+  const handleOptionClick = (o) => {
+    setOption(o);
     setSelectedOption(option);
-    onAnswer(option === correctAnswer);
+    setIsWaiting(true);
   };
+  
+  useEffect(() => {
+    let timer;
+    if (isWaiting) {
+      timer = setTimeout(() => {
+        setSelectedOption(null);
+        setIsWaiting(false); // Termina el estado de espera
+        onAnswer(option === correctAnswer);
+      }, 1000);
+    }
+
+    // Limpiar el temporizador si el componente se desmonta
+    return () => clearTimeout(timer);
+  }, [isWaiting]);
 
   return (
     <div className="w-full">
@@ -14,7 +31,7 @@ const Question = ({ question, options, correctAnswer, onAnswer }) => {
       {options.map((option, index) => (
         <button
           key={index}
-          className={`option-button ${selectedOption === option ? 'bg-red-500' : ''}`}
+          className={`option-button ${selectedOption === option ? 'bg-slate-500' : ''}  `}
           onClick={() => handleOptionClick(option)}
           
         >
