@@ -7,6 +7,7 @@ import { BrowserRouter, Route, Routes} from 'react-router-dom'
 import { MarkdownPage } from './pages/MarkdownPage'
 import { QuizPage } from './pages/QuizPage'
 function App() {
+  console.log('App')
 
   return (
     <>
