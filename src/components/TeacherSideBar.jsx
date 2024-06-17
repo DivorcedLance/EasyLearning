@@ -5,16 +5,12 @@ import courses_icon from '../assets/courses_icon.svg'
 
 import { AsideButton } from './AsideButton'
 
-export function TeacherSideBar() {
+export function TeacherSideBar({onButtonClick}) {
   return (
     <aside className="w-96">
-      <nav className="flex flex-col gap-4 h-max">
-        <ul className="flex flex-col gap-4">
-          <AsideButton icon={test_icon} label="Datos" />
-          <AsideButton icon={courses_icon} label="Cursos" />
-        </ul>
-        <div className="bg-[#969191] text-white font-bold text-center flex items-center justify-center gap-4 w-96 h-28">
-          <img src={default_avatar} alt="" className="w-20" />
+      <nav className="flex flex-col gap-4 h-full bg-[#D7E897]">
+        <div className="flex flex-col bg-[#96919100] text-white font-bold text-center items-center justify-center gap-4 w-96 h-fit">
+          <img src={default_avatar} alt="" className="w-2/5 mt-5" />
           <div className="flex flex-col">
             <h2>Napoleon Alva, Jorge</h2>
             <p className="flex justify-center items-center">
@@ -23,6 +19,10 @@ export function TeacherSideBar() {
             </p>
           </div>
         </div>
+        <ul className="flex flex-col gap-4">
+          <AsideButton icon={test_icon} label="Datos" onClick={() => onButtonClick('datos')} />
+          <AsideButton icon={courses_icon} label="Cursos" onClick={() => onButtonClick('cursos')}/>
+        </ul>
       </nav>
     </aside>
   )

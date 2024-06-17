@@ -14,6 +14,7 @@ function App() {
           <Route path="/word" element={<WordPage/>} />
           <Route path='/student' element={<StudentPage/>} />
           <Route path='/teacher' element={<TeacherPage/>} />
+          {/*  */}
         </Routes>
       </BrowserRouter>
     </>

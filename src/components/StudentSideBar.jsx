@@ -19,8 +19,7 @@ export function StudentSideBar() {
             icon={reinforcement_icon}
             label="Evaluación de reforzamiento"
           />
-        </ul>
-        <div className="bg-[#969191] text-white font-bold text-center flex items-center justify-center gap-4 w-96 h-28">
+        <div className="bg-[#969191] text-white font-bold text-center flex items-center justify-center gap-4 w-96 h-48">
           <img src={default_avatar} alt="" className="w-20" />
           <div className="flex flex-col">
             <h2>PATRICK GUZMAN</h2>
@@ -30,6 +29,7 @@ export function StudentSideBar() {
             </p>
           </div>
         </div>
+        </ul>
       </nav>
     </aside>
   )
