@@ -20,7 +20,7 @@ const Question = ({ question, options, correctAnswer, onAnswer }) => {
   useEffect(() => {
     let timer
     if (isWaiting) {
-      const isCorrect = option === correctAnswer;
+      const isCorrect = selectedOption === correctAnswer;
       playSound(isCorrect);
       timer = setTimeout(() => {
         setSelectedOption(null)
