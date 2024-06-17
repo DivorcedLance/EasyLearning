@@ -7,19 +7,14 @@ export function WordPage() {
       <main>
         <CKEditor
           editor={ClassicEditor}
-          onReady={(editor) => {
-            // You can store the "editor" and use when it is needed.
-            console.log('Editor is ready to use!', editor)
+          config={{
+            toolbar: [
+              'heading', '|',
+              'bold', 'italic', 'link', '|',
+              'undo', 'redo',
+            ],
           }}
-          onChange={(event) => {
-            console.log(event)
-          }}
-          onBlur={(event, editor) => {
-            console.log('Blur.', editor)
-          }}
-          onFocus={(event, editor) => {
-            console.log('Focus.', editor)
-          }}
+          style={{ width: '800px', height: '400px' }}
         />
       </main>
     </>
