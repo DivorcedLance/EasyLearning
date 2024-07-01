@@ -6,6 +6,7 @@ import { WordPage } from './pages/WordPage'
 import { BrowserRouter, Route, Routes} from 'react-router-dom'
 import { MarkdownPage } from './pages/MarkdownPage'
 import { QuizPage } from './pages/QuizPage'
+import TeacherManagePage from './pages/TeacherManagePage'
 function App() {
   console.log('App')
 
@@ -17,6 +18,7 @@ function App() {
           <Route path="/word" element={<WordPage/>} />
           <Route path='/student' element={<StudentPage/>} />
           <Route path='/teacher' element={<TeacherPage/>} />
+          <Route path='/teacher/:courseName' element={<TeacherManagePage/>} />
           <Route path='/md' element={<MarkdownPage/>} />
           <Route path='/quiz' element={<QuizPage/>} />
           {/*  */}

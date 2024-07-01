@@ -1,9 +1,14 @@
-
+import { Link } from "react-router-dom"
 function CourseCard({courseName}) {
+
+    // const handleCourseClick = () => {
+    //     console.log('click')
+    // }
 
   return (
     <>
-        <div className="flex flex-col bg-white rounded-lg shadow-lg w-auto">
+    <Link to={`/teacher/${courseName}`}>
+        <div className="flex flex-col bg-white rounded-lg shadow-lg w-auto cursor-pointer hover:shadow-2xl transition duration-300 ease-in-out">
             <div className="flex justify-between items-center p-4 bg-[#CC99FF]">
                 <div>
                     <h2 className="text-lg font-semibold">{courseName}</h2>
@@ -21,6 +26,7 @@ function CourseCard({courseName}) {
                 <img src="img/carpeta.png" alt="" className='object-cover' />
             </div>
         </div>
+    </Link>
     </>
   )
 }

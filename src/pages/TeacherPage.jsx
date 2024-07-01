@@ -17,7 +17,7 @@ export function TeacherPage() {
     <div className='h-full flex flex-col'>
       <Header />
       <div className='flex-grow flex flex-row'>
-        <TeacherSideBar onButtonClick={handleButtonClick}/>
+        <TeacherSideBar onButtonClick={handleButtonClick} page={'home'}/>
         <div className='w-full flex flex-col'>
           <div className='w-full'>
             <Panel vista={vista} role={path}/>
