@@ -4,6 +4,9 @@ https://divorcedlance.github.io/EasyLearning/
 # Drive del proyecto:
 https://drive.google.com/drive/folders/1aaF3Toffge7PvAC_cy1f_d4GB75QJbGs
 
+# Link del Figma:
+https://www.figma.com/design/9HgaYXfpwSsEmwqFXgLWsP/TESIS_1?node-id=0-1&t=wObKkwMo8mKPExd2-0
+
 # Requirements
 
 ## BackEnd
