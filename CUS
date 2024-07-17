@@ -1,0 +1,101 @@
+# Especificaciones
+
+- Todos es independiente por Colegio-Curso-Grado
+- Como docente se puede acceder al material de las demás secciones
+
+# Eliminar
+
+- Tutor
+- Recursos digitales
+
+# Docente
+
+## Notificaciones
+
+- Al acercarse la fecha de reforzamiento
+
+## Gestión de evaluaciones
+
+### Evaluaciones semanales
+
+- Crear
+	Selector de Preguntas
+		* Filtro por tema
+		* Filtro por dificultad
+- Ver entregas
+	Puede adjuntar solución (adjunta a la pregunta)
+	Puede ver calificaciones
+	No puede comentar
+- Asignar
+	Elige evaluación, fecha y hora de entrega
+
+### Tarea Domiciliaria
+
+- Crear
+	Selector de Preguntas
+		* Filtro por tema
+		* Filtro por dificultad
+- Ver entregas
+	Puede adjuntar solución (adjunta a la pregunta)
+	Puede calificar
+	Puede comentar
+- Asignar
+	Elige tarea, fecha y hora de entrega
+
+### Reforzamiento
+
+- Trimestral (4 al año)
+- Funcionamiento similar a Tarea Domiciliaria
+	- Selecciona preguntas a las que tiene que adjuntar solucionario
+	- Se califica automáticamente
+	- n preguntas por semana/semana (Intermedio|avanzado)
+
+## Gestión de preguntas
+
+- Crea preguntas en base a una plantilla
+- Asigna dificultad
+- Asigna tema
+- () Adjunta solución
+
+## Reportes
+
+- Ve las estadisticas del curso, grado, sección
+- Puede ver las de los alumnos
+- Puede escribir una anotación a un alumno particular en su curso
+
+# Estudiante
+
+## Notificaciones
+
+- Al recibir un comentario en una pregunta
+
+## Test
+
+- Puede realizar su diagnostico semestral
+- Puede ver sus resultados previos
+
+## Prueba semanal
+
+- Puede iniciar la prueba semanal 
+- Puede ver sus resultado previos
+
+## Tarea en casa
+
+- Puede resolver la tarea 
+- Puede ver sus resultado previos
+
+## Reforzamiento
+
+- Puede resolver el reforzamiento trimestral
+- Puede ver sus resultado previos
+
+## Resultados
+
+- Puede ver los resultados de prueba semanal
+- Puede ver los resultados de tarea en casa
+- Puede ver los resultados de reforzamientos
+- Puede ver un resumen de su rendimiento por curso
+
+# Administrador
+
+- Crear usuarios
